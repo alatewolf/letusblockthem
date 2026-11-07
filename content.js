@@ -88,7 +88,7 @@ async function readMembers(id, onPage = () => {}) {
   for (let page = 1; page <= last; page++) {
     onPage(page, last);
     const res = await fetch(`/groups/${id}/members?page=${page}`);
-    if (!res.ok) throw new Error(`FetLife answered ${res.status} on page ${page}. Try again in a few minutes.`);
+    if (!res.ok) throw new Error(`FL answered ${res.status} on page ${page}. Try again in a few minutes.`);
     const doc = new DOMParser().parseFromString(await res.text(), 'text/html');
     doc.querySelectorAll('main a.font-bold[href^="/"]').forEach((a) => {
       const n = nickOf(a.getAttribute('href'));
@@ -139,7 +139,7 @@ function coverFor() {
   if (id && groups[id]) {
     const { nicks, updatedAt } = groups[id];
     const when = updatedAt ? ` The member list updated ${ago(updatedAt)}.` : '';
-    return { key: `g${id}`, title: 'You hid this group', body: `Its ${nicks.length.toLocaleString()} members stay hidden across FetLife.${when}` };
+    return { key: `g${id}`, title: 'You hid this group', body: `Its ${nicks.length.toLocaleString()} members stay hidden on every page.${when}` };
   }
   const nick = location.pathname.split('/')[1];
   if (hidden.has(nick)) {

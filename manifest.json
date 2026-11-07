@@ -1,8 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "FetLife Group Hider",
+  "name": "Let Us Block Them",
   "version": "1.0",
-  "description": "Hides the posts, comments, messages and member cards of everyone in a FetLife group you choose.",
+  "description": "Hide everyone in an FL group you choose: their posts, comments, notifications and messages leave your screen.",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
   "permissions": ["storage"],
   "content_scripts": [
     {
