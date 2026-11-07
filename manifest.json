@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "FetLife Group Hider",
+  "version": "1.0",
+  "description": "Hides the posts, comments, messages and member cards of everyone in a FetLife group you choose.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://fetlife.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
