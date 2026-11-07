@@ -1,132 +1,142 @@
 # Let Us Block Them
 
-A Chrome extension that hides everyone in an FL group you pick, on your own screen.
+Let Us Block Them is a free extension (an add-on) for the Chrome web browser. It hides everyone in an FL group you pick, so you stop seeing them.
 
-- Their posts, comments, notifications and messages disappear for you.
+- Their posts, comments, notifications and messages disappear from your screen.
 - Nobody is blocked, and nobody is told.
-- Nothing is sent anywhere except normal page visits to FL.
+- Your list of hidden people stays on your computer. Nobody else gets it, not even the people who made this extension.
 
 ## What it hides
 
-Once you hide a group, these disappear for every member of it:
+Pick a group, and everyone in it disappears from what you see on FL:
 
-- posts and discussions
-- comments, and the replies under them
-- notifications, loves and mentions
-- message threads in your inbox
-- cards in member lists and search results
+- their posts and discussions
+- their comments, and the replies under them
+- their notifications, loves and mentions
+- their conversations in your inbox
+- their cards in member lists and search results
 
-If you open the hidden group, or the profile of someone in it, a full-page cover says so. Choose "Go back" to leave, or "Show the page" to see it anyway.
+If you open the hidden group, or the profile of someone in it, a dark page covers it and tells you why. Press "Go back" to leave, or "Show the page" to see it anyway.
 
 ## Why hide, and not block?
 
-Some of the groups people most want gone have over 69,000 members. Blocking all of them is a bad idea.
+Some of the groups people most want gone have over 69,000 members. Blocking all of them is a bad idea. To see why, it helps to know one thing about how websites work.
 
-1. It would hammer FL's servers. Every block is a separate request that changes data on FL's side, so one group means at least 69,000 of them from your account. If 1,000 people did it, FL would receive 69 million block requests. That is the kind of load that crashes a website.
-2. It would almost certainly get your account banned. No person blocks 69,000 people by hand, so FL would see a bot, and it would be right. Almost all online businesses forbid mass automated actions in their terms of use, and a suspended account is the usual result.
-3. You could not take it back. Unblocking them all means another 69,000 requests.
+Every time you open a page or press a button on FL, your browser sends one message to FL's computers. This message is called a request. FL's computers can only deal with so many requests at once. When too many arrive together, the site slows down or stops working for everyone.
 
-Hiding is a different kind of job. It reads the group's member list, the same pages anyone can open from the group's "Members" tab, 20 names at a time with a pause between pages. It changes nothing on FL. All the hiding happens on your own screen.
+1. Blocking would flood FL with requests. Each block is one request, and it makes FL change its records, which is more work for FL than showing a page. Blocking a group of 69,000 people means 69,000 of these from your account. If 1,000 people did the same, FL would get 69 million block requests. That is the kind of flood that crashes a website.
+2. It would almost certainly get your account banned. No person blocks 69,000 people by hand, so FL would see a robot at work, and it would be right. Almost all online businesses ban this in the rules you agree to when you sign up, and the usual result is a banned account.
+3. You could not take it back. Unblocking everyone means another 69,000 requests.
+
+This extension never asks FL to change anything. It only looks at the group's member list: the same pages you can open yourself from the group's "Members" tab. It looks at one page of 20 names at a time, with a short pause between pages, and keeps the names on your computer. All the hiding happens on your own screen.
 
 For a group of 69,000 members:
 
 | | Block everyone | Hide with this extension |
 | --- | --- | --- |
-| Requests to FL | at least 69,000 | about 3,450, then the same once a day to catch new members |
-| What each request does | blocks a real person | reads one page |
-| To undo | another 69,000 requests | one button, nothing sent |
+| Requests to FL | 69,000 or more | about 3,450, then the same once a week to catch new members |
+| What each request does | blocks one person | looks at one page of 20 names |
+| What changes on FL | 69,000 blocks | nothing |
+| To undo | 69,000 more requests | one button, no requests |
 
 ## How to use it
 
-1. Open the group on FL.
-2. Press "Mass Hide Members" in the bottom-right corner.
-3. Keep the tab open while it reads the member list. It takes at least 20 seconds per 1,000 members, so a group of 69,000 takes over 20 minutes.
+1. Install the extension. The steps are in "Install it" below.
+2. Open the group on FL.
+3. Press "Mass Hide Members" in the bottom-right corner.
+4. Keep the tab open while it reads the member list. It takes at least 20 seconds for every 1,000 members, so a group of 69,000 takes over 20 minutes.
 
-To undo, open the group and press "Show this group's members". Everyone from that group shows again at once.
+To bring everyone back, open the group again and press "Show this group's members".
 
 ## Your data
 
-### What it reads
+### What it looks at
 
-- The FL pages you open. Any extension that works on a website can see that site's pages. This one looks only at usernames and links, to decide what to hide. It never saves or sends the text of posts, comments or messages.
-- The group's member list, when you press the button and once a day after that.
+- The FL pages you open. Any extension that works on a website can see that website's pages. This one only looks at the usernames on each page, to decide what to hide. It never keeps or sends what anyone wrote.
+- The group's member list, when you press the button, and once a week after that to catch new members.
 
-### What it stores
+### What it keeps
 
-Everything stays on your own computer, in Chrome's storage for this extension:
+Chrome gives each extension a small private space on your computer. Websites cannot read it, and Chrome does not copy it to Google or to your other devices. This extension keeps only:
 
 - the name of each group you hide
 - the usernames of its members
-- the time it last read the list
-- one time stamp, so two open tabs do not read the same list at once
+- when it last looked at the member list
+- one time note, so two open FL tabs do not read the same list at once
 
-Nothing else. Not your username, your password, your messages or your browsing history.
+Nothing else. Not your username, your password, your messages or the sites you visit.
 
 ### What it sends
 
-- To the developer, or anyone else: nothing. There is no server, no analytics, no tracking and no ads.
-- To FL: only requests for the group's member pages. These are the pages you see when you click "Members" on a group. Your browser asks for them with your normal FL login, so FL can see that your account opened them, as with any page you open.
+- To the people who made it, or anyone else: nothing. There is no company server, no tracking and no ads.
+- To FL: only requests to see the group's member pages. Your browser sends them with your normal FL login, so FL can see that your account looked at those pages, the same as when you open any page yourself.
 
-### What Chrome lets it do
+### What Chrome allows it to do
 
-- Storage, to keep the member lists on your computer.
-- Access to FL pages only. It cannot see other websites, your other tabs or your history.
+When you install it, Chrome warns that the extension can "read and change your data" on FL. Chrome shows this warning for every extension that changes what a website shows. Here it means the extension can hide things on FL pages. It cannot see any other website, your other tabs or your history.
 
 ## How it works
 
-1. It reads the list. It asks for the group's member pages one at a time and writes down every username.
-2. It remembers the list on your computer, so hiding continues on every page and after Chrome restarts.
-3. It hides as you browse. On every FL page, it checks who wrote each post, comment, notification, inbox row and member card, and makes the ones from the list invisible. FL adds content as you scroll, so it checks again each time the page changes. Nothing is deleted, so undo is instant.
-4. It covers hidden pages. The group's own pages and its members' profiles get a full-page cover.
-5. It stays up to date. Once a day it reads the list again and adds anyone who joined. People who leave the group stay hidden.
+1. It makes a list. It opens the group's member pages one by one and writes down every username.
+2. It keeps the list on your computer, so hiding still works on every page and after you restart Chrome.
+3. It hides as you browse. On every FL page, it checks who wrote each post, comment, notification, conversation and member card. If that person is on the list, it hides that item. FL keeps adding things as you scroll, so it checks again each time.
+4. It covers hidden pages. If you open the hidden group or one of its members' profiles, a dark page covers it.
+5. It stays up to date. Once a week, it looks at the member list again and adds anyone who joined. People who leave the group stay hidden.
+
+Nothing is deleted, only hidden. That is why bringing everyone back is instant.
 
 ## The code
 
+You do not need to read any code to use this extension. This part is for anyone who wants to check what it does.
+
 | File | What it is |
 | --- | --- |
-| `manifest.json` | The extension's ID card: its name, its icon, the one permission it asks for and the one site it runs on. |
-| `content.js` | All the code that runs. About 250 lines, with a comment above each part. |
+| `manifest.json` | The extension's ID card: its name, its icon, what Chrome allows it to do and the one website it works on. |
+| `content.js` | All the instructions the extension follows. About 250 lines, with a note in plain English above each part. |
 | `icons/` | The icon, in three sizes. |
 | `PRIVACY.md` | The privacy policy. |
-| `store/` | The Chrome Web Store text and pictures. The names in the pictures are invented. |
-| `scripts/` | `make-icons.py` draws the icon. `verify.sh` checks the extension before a release. |
-| `LICENSE` | The MIT license: you can use, copy and change this code freely. |
+| `store/` | The text and pictures for the Chrome Web Store. The names in the pictures are made up. |
+| `scripts/` | Two tools for the developer: one draws the icon, one checks the extension before a release. |
+| `LICENSE` | The license: anyone can use, copy and change this code for free. |
 
 ### Inside content.js
 
-The file runs top to bottom in these parts:
+The instructions are split into parts. Each part has a name and does one job:
 
-1. The hiding rule: one line of style that makes anything marked "hidden" invisible.
-2. `authorsOf` finds the username behind each post, comment, inbox row or member card.
+1. The hiding rule tells Chrome to make anything marked "hidden" invisible.
+2. `authorsOf` works out who wrote each post, comment, conversation or member card.
 3. `hideName` takes one name out of a list like "A, B and C" and tidies the commas.
-4. `hideNotifications` removes hidden names from a notification, and the whole notification if everyone in it is hidden.
-5. A page watcher runs the check again whenever FL adds new content.
-6. `readMembers` requests the member pages. This is the only part that uses the internet.
-7. `refreshOldest` reads a list again when it is more than a day old.
-8. `coverFor` and `renderOverlay` build the full-page cover.
+4. `hideNotifications` takes hidden names out of your notifications, and hides a notification completely if everyone in it is hidden.
+5. A watcher runs the check again each time FL adds new things to the page.
+6. `readMembers` looks at the group's member pages. This is the only part that talks to FL.
+7. `refreshOldest` looks at a member list again when it is more than a week old.
+8. `coverFor` and `renderOverlay` make the dark page that covers a hidden group or profile.
 9. `render` and `toggle` show the button on group pages and turn hiding on or off.
 
 ### Check it yourself
 
-You do not need to trust this page. Open `content.js` and search for these words:
+You do not need to trust this page. Open `content.js` above, press Ctrl+F (Cmd+F on a Mac) and search for these:
 
-- `fetch` appears once, in `readMembers`. Its address starts with `/groups/`, so the request can only go to the site you are on.
-- `http`, `XMLHttpRequest`, `sendBeacon` and `WebSocket` appear zero times. The code has no other way to send anything out.
+- `http` and `.com`: 0 results. To send anything to another website, the code would have to contain that website's address. It contains none.
+- `fetch`: 1 result, in `readMembers`. This is the line that asks FL for the member pages. Its address starts with `/groups/`, with no website name in front, so it can only go to FL.
 
-## Install it from this code
+## Install it
 
-1. On this page, press "Code", then "Download ZIP", and unzip it.
-2. In Chrome, open `chrome://extensions` and turn on "Developer mode" in the top-right corner.
-3. Press "Load unpacked" and pick the unzipped folder.
+1. Press the green "Code" button near the top of this page, then "Download ZIP". Open the downloaded file to unzip it.
+2. In Chrome, type `chrome://extensions` in the address bar and press Enter.
+3. Turn on "Developer mode" in the top-right corner. This is the normal Chrome setting for installing an extension from a folder.
+4. Press "Load unpacked" and pick the unzipped folder.
+5. Open FL. The "Mass Hide Members" button shows on group pages.
 
 ## Limits
 
-- It hides only in this Chrome browser. Your phone, the FL app and other browsers still show everyone.
-- It depends on how FL builds its pages. If FL changes its design, some items can show again until the extension is updated.
-- Name lists are tidied for English only.
-- You cannot unhide one person yet, only the whole group.
-- If FL refuses a page while it reads a large group, nothing is hidden. Wait a few minutes and press the button again.
+- It only hides things in Chrome on this computer. Your phone, the FL app and other browsers still show everyone.
+- It depends on how FL's pages are built. If FL changes its design, some things can show again until this extension is updated.
+- People who join a hidden group can stay visible for up to a week, until the next weekly check.
+- You cannot bring back one person on their own yet, only the whole group.
+- If FL stops answering while it reads a large group, nothing is hidden. Wait a few minutes and try again.
+- If you use FL in a language other than English, a list of names like "A, B and C" can show a stray comma.
 
 ## License
 
-MIT. See `LICENSE`.
+MIT: anyone can use, copy and change this code for free. See `LICENSE`.

@@ -2,7 +2,7 @@
 // It only hides things on your screen. The only requests it sends are reads of each group's member list.
 
 const HIDE = 'data-fl-hidden';
-const REFRESH_MS = 24 * 3600e3; // re-read each hidden group's member list once a day, to catch new members
+const REFRESH_MS = 7 * 24 * 3600e3; // re-read each hidden group's member list once a week, to catch new members
 let groups = {}; // { [groupId]: { name, nicks: [], updatedAt } }, saved in chrome.storage.local
 let hidden = new Set();
 let reading = false;
@@ -104,7 +104,7 @@ async function readMembers(id, onPage = () => {}) {
   return [...nicks];
 }
 
-// Once a day, while you use FetLife, re-read one hidden group and add its new members.
+// Once a week, while you use FetLife, re-read one hidden group and add its new members.
 // People who leave the group stay hidden.
 async function refreshOldest() {
   const now = Date.now();

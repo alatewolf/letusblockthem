@@ -21,7 +21,7 @@ Open the group, press Mass Hide Members, and the extension reads the group's mem
 
 If you open a hidden group or a hidden person's profile, a full-page cover says so and offers a way back.
 
-The member list updates itself once a day, so people who join the group later are hidden too.
+The member list updates itself once a week, so people who join the group later are hidden too.
 
 Nobody is blocked and nobody is told. Nothing leaves your browser: the member list stays on your computer. To undo, open the group and press "Show this group's members".
 
@@ -31,7 +31,7 @@ Single purpose: Hides, on the user's own screen, the posts, comments, notificati
 
 Permission "storage": Saves the user's hidden groups and their member lists in the browser, so hiding continues across pages and browser restarts.
 
-Host permission (content script on https://fetlife.com/*): The extension works only on fetlife.com. It reads a group's public member pages when the user presses the button (and once a day after that), and hides those members' posts, comments, notifications and messages on the pages the user views.
+Host permission (content script on https://fetlife.com/*): The extension works only on fetlife.com. It reads a group's public member pages when the user presses the button (and once a week after that), and hides those members' posts, comments, notifications and messages on the pages the user views.
 
 Remote code: No. All code is in the package.
 

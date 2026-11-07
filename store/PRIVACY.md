@@ -6,7 +6,7 @@ Let Us Block Them is a Chrome extension. It hides, on your own screen, the membe
 
 ## What it reads
 
-- When you press Mass Hide Members, and once a day after that, it reads the group's member list pages on FL. It reads them with your own browser session, the same way you would by clicking through the pages.
+- When you press Mass Hide Members, and at most once a day after that, it reads the group's member list pages on FL. It reads them with your own browser session, the same way you would by clicking through the pages.
 - On the FL pages you open, it reads the usernames on posts, comments, notifications and messages, only to decide what to hide.
 
 ## What it stores
