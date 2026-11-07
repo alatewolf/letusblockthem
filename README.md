@@ -20,19 +20,28 @@ If you open the hidden group, or the profile of someone in it, a full-page cover
 
 ## Why hide, and not block?
 
-FL already has a block button, so why not press it for everyone in the group? Three reasons.
+Some of the groups people most want gone have over 69,000 members. Blocking all of them is a bad idea.
 
-1. It would overload FL. Blocking is one request per person, so a group of 2,000 members means at least 2,000 requests from one account in a few minutes. If 500 people did the same, that is a million requests. That kind of load can slow a site down or take it offline for everyone.
-2. It would put your account at risk. Thousands of blocks in a few minutes looks like a bot. Sites like FL usually forbid mass automated actions in their terms of use, and the usual result is a suspended account.
-3. It is hard to undo. Unblocking 2,000 people takes 2,000 more requests.
+1. It would hammer FL's servers. Every block is a separate request, so one group means at least 69,000 requests from your account. Even at one block every second, without a break, that takes 19 hours. If 1,000 people did it, FL would receive 69 million block requests. That is the kind of load that crashes a website.
+2. It would almost certainly get your account banned. No person blocks 69,000 people by hand, so FL would see a bot, and it would be right. Most sites forbid mass automated actions in their terms of use, and a suspended account is the usual result.
+3. You could not take it back. Unblocking them all means another 69,000 requests.
 
-Hiding is gentle by comparison. It reads the group's member list the way you would by clicking through it: one page of 20 members at a time, with a pause between pages. A group of 2,000 members is 100 page visits, and the same again once a day to catch new members. Everything else happens on your own screen, and one button brings everyone back.
+Hiding is a different kind of job. It reads the group's member list, the same pages anyone can open from the group's "Members" tab, 20 names at a time with a pause between pages. It changes nothing on FL. All the hiding happens on your own screen.
+
+For a group of 69,000 members:
+
+| | Block everyone | Hide with this extension |
+| --- | --- | --- |
+| Requests to FL | at least 69,000 | about 3,450, then the same once a day to catch new members |
+| What each request does | blocks a real person | reads one page |
+| Time | 19 hours at one block a second | at least 23 minutes |
+| To undo | another 69,000 requests | one button, nothing sent |
 
 ## How to use it
 
 1. Open the group on FL.
 2. Press "Mass Hide Members" in the bottom-right corner.
-3. Keep the tab open while it reads the member list. A group of 2,000 members takes at least 40 seconds.
+3. Keep the tab open while it reads the member list. It takes at least 20 seconds per 1,000 members, so a group of 69,000 takes over 20 minutes.
 
 To undo, open the group and press "Show this group's members". Everyone from that group shows again at once.
 
