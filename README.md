@@ -22,8 +22,8 @@ If you open the hidden group, or the profile of someone in it, a full-page cover
 
 Some of the groups people most want gone have over 69,000 members. Blocking all of them is a bad idea.
 
-1. It would hammer FL's servers. Every block is a separate request, so one group means at least 69,000 requests from your account. Even at one block every second, without a break, that takes 19 hours. If 1,000 people did it, FL would receive 69 million block requests. That is the kind of load that crashes a website.
-2. It would almost certainly get your account banned. No person blocks 69,000 people by hand, so FL would see a bot, and it would be right. Most sites forbid mass automated actions in their terms of use, and a suspended account is the usual result.
+1. It would hammer FL's servers. Every block is a separate request that changes data on FL's side, so one group means at least 69,000 of them from your account. If 1,000 people did it, FL would receive 69 million block requests. That is the kind of load that crashes a website.
+2. It would almost certainly get your account banned. No person blocks 69,000 people by hand, so FL would see a bot, and it would be right. Almost all online businesses forbid mass automated actions in their terms of use, and a suspended account is the usual result.
 3. You could not take it back. Unblocking them all means another 69,000 requests.
 
 Hiding is a different kind of job. It reads the group's member list, the same pages anyone can open from the group's "Members" tab, 20 names at a time with a pause between pages. It changes nothing on FL. All the hiding happens on your own screen.
@@ -34,7 +34,6 @@ For a group of 69,000 members:
 | --- | --- | --- |
 | Requests to FL | at least 69,000 | about 3,450, then the same once a day to catch new members |
 | What each request does | blocks a real person | reads one page |
-| Time | 19 hours at one block a second | at least 23 minutes |
 | To undo | another 69,000 requests | one button, nothing sent |
 
 ## How to use it
