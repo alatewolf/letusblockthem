@@ -14,4 +14,6 @@ for (const [size, file] of Object.entries(m.icons || {})) {
 "
 node --check content.js
 node "$HOME/.claude/scripts/design-slop-lint/slop-lint.mjs" content.js
+# Firefox: the same folder must pass Mozilla's add-on linter with no warnings
+lint=$(npx --yes web-ext@10.8.0 lint --warnings-as-errors 2>&1) || { echo "$lint"; exit 1; }
 echo "verify: ok"

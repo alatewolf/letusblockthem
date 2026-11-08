@@ -158,14 +158,17 @@ function renderOverlay() {
     overlay.setAttribute('aria-modal', 'true');
     overlay.setAttribute('aria-labelledby', 'fl-cover-title');
     overlay.style.cssText = 'position:fixed;inset:0;z-index:2147483646;display:none;align-items:center;justify-content:center;padding:16px;background:#1c1c1c;color:#e5e5e5;font:16px/1.5 system-ui,sans-serif';
-    const button = 'display:block;width:100%;min-height:44px;margin-top:8px;padding:0 16px;border:0;border-radius:4px;font:inherit;font-weight:600;cursor:pointer';
+    // static HTML only: Firefox's add-on review flags innerHTML built from variables
     overlay.innerHTML = `
       <div style="width:100%;max-width:340px;text-align:center">
         <h2 id="fl-cover-title" style="margin:0 0 8px;font-size:22px;line-height:1.3;text-wrap:balance"></h2>
         <p style="margin:0 0 24px;text-wrap:pretty"></p>
-        <button type="button" data-back style="${button};background:#b91c1c;color:#e5e5e5">Go back</button>
-        <button type="button" data-show style="${button};background:#333;color:#e5e5e5">Show the page</button>
+        <button type="button" data-back style="background:#b91c1c;color:#e5e5e5">Go back</button>
+        <button type="button" data-show style="background:#333;color:#e5e5e5">Show the page</button>
       </div>`;
+    for (const b of overlay.querySelectorAll('button')) {
+      b.style.cssText = 'display:block;width:100%;min-height:44px;margin-top:8px;padding:0 16px;border:0;border-radius:4px;font:inherit;font-weight:600;cursor:pointer;' + b.style.cssText;
+    }
     overlay.querySelector('[data-back]').addEventListener('click', () => (history.length > 1 ? history.back() : location.assign('/home')));
     overlay.querySelector('[data-show]').addEventListener('click', showAnyway);
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && overlay.style.display === 'flex') showAnyway(); });
