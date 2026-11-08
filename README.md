@@ -1,6 +1,6 @@
 # Let Us Block Them
 
-Let Us Block Them is a free extension (an add-on) for the Chrome web browser. It hides everyone in an FL group you pick, so you stop seeing them.
+Let Us Block Them is a free extension (an add-on) for the Chrome and Firefox web browsers. It hides everyone in an FL group you pick, so you stop seeing them.
 
 - Their posts, comments, notifications and messages disappear from your screen.
 - Nobody is blocked, and nobody is told.
@@ -57,7 +57,7 @@ To bring everyone back, open the group again and press "Show this group's member
 
 ### What it keeps
 
-Chrome gives each extension a small private space on your computer. Websites cannot read it, and Chrome does not copy it to Google or to your other devices. This extension keeps only:
+Your browser gives each extension a small private space on your computer. Websites cannot read it, and the browser does not copy it to Google, Mozilla or your other devices. This extension keeps only:
 
 - the name of each group you hide
 - the usernames of its members
@@ -71,14 +71,14 @@ Nothing else. Not your username, your password, your messages or the sites you v
 - To the people who made it, or anyone else: nothing. There is no company server, no tracking and no ads.
 - To FL: only requests to see the group's member pages. Your browser sends them with your normal FL login, so FL can see that your account looked at those pages, the same as when you open any page yourself.
 
-### What Chrome allows it to do
+### What your browser allows it to do
 
-When you install it, Chrome warns that the extension can "read and change your data" on FL. Chrome shows this warning for every extension that changes what a website shows. Here it means the extension can hide things on FL pages. It cannot see any other website, your other tabs or your history.
+When you install it, Chrome warns that the extension can "read and change your data" on FL, and Firefox says it can "access your data" for FL. Both show this warning for every extension that changes what a website shows. Here it means the extension can hide things on FL pages. It cannot see any other website, your other tabs or your history.
 
 ## How it works
 
 1. It makes a list. It opens the group's member pages one by one and writes down every username.
-2. It keeps the list on your computer, so hiding still works on every page and after you restart Chrome.
+2. It keeps the list on your computer, so hiding still works on every page and after you restart your browser.
 3. It hides as you browse. On every FL page, it checks who wrote each post, comment, notification, conversation and member card. If that person is on the list, it hides that item. FL keeps adding things as you scroll, so it checks again each time.
 4. It covers hidden pages. If you open the hidden group or one of its members' profiles, a dark page covers it.
 5. It stays up to date. Once a week, it looks at the member list again and adds anyone who joined. People who leave the group stay hidden.
@@ -91,19 +91,20 @@ You do not need to read any code to use this extension. This part is for anyone 
 
 | File | What it is |
 | --- | --- |
-| `manifest.json` | The extension's ID card: its name, its icon, what Chrome allows it to do and the one website it works on. |
+| `manifest.json` | The extension's ID card: its name, its icon, what the browser allows it to do and the one website it works on. |
 | `content.js` | All the instructions the extension follows. About 250 lines, with a note in plain English above each part. |
 | `icons/` | The icon, in three sizes. |
 | `PRIVACY.md` | The privacy policy. |
 | `store/` | The text and pictures for the Chrome Web Store. The names in the pictures are made up. |
 | `scripts/` | Two tools for the developer: one draws the icon, one checks the extension before a release. |
+| `web-ext-config.mjs` | Settings for Mozilla's tool that checks and packs the Firefox file. |
 | `LICENSE` | The license: anyone can use, copy and change this code for free. |
 
 ### Inside content.js
 
 The instructions are split into parts. Each part has a name and does one job:
 
-1. The hiding rule tells Chrome to make anything marked "hidden" invisible.
+1. The hiding rule tells the browser to make anything marked "hidden" invisible.
 2. `authorsOf` works out who wrote each post, comment, conversation or member card.
 3. `hideName` takes one name out of a list like "A, B and C" and tidies the commas.
 4. `hideNotifications` takes hidden names out of your notifications, and hides a notification completely if everyone in it is hidden.
@@ -122,6 +123,16 @@ You do not need to trust this page. Open `content.js` above, press Ctrl+F (Cmd+F
 
 ## Install it
 
+### Firefox, on a computer or an Android phone
+
+1. Open [Let Us Block Them on Firefox Add-ons](https://addons.mozilla.org/firefox/addon/let-us-block-them/) in Firefox.
+2. Press "Add to Firefox", then "Add".
+3. Open FL. The "Mass Hide Members" button shows on group pages.
+
+Firefox updates it by itself when a new version comes out.
+
+### Chrome
+
 1. Press the green "Code" button near the top of this page, then "Download ZIP". Open the downloaded file to unzip it.
 2. In Chrome, type `chrome://extensions` in the address bar and press Enter.
 3. Turn on "Developer mode" in the top-right corner. This is the normal Chrome setting for installing an extension from a folder.
@@ -130,7 +141,7 @@ You do not need to trust this page. Open `content.js` above, press Ctrl+F (Cmd+F
 
 ## Limits
 
-- It only hides things in Chrome on this computer. Your phone, the FL app and other browsers still show everyone.
+- It only hides things in the browser where you installed it. The FL app and your other browsers still show everyone.
 - It depends on how FL's pages are built. If FL changes its design, some things can show again until this extension is updated.
 - People who join a hidden group can stay visible for up to a week, until the next weekly check.
 - You cannot bring back one person on their own yet, only the whole group.
